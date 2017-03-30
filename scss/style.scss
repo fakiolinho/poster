@@ -1,0 +1,92 @@
+@import "normalize.css";
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.poster {
+  background-color: rgba(#4C4C4A, .8);
+  box-shadow: 0 0 20px #000000;
+  margin: 0 auto;
+  padding: 13rem 0 15rem;
+  width: 80rem;
+
+  &__title {
+    color: #FFFFFF;
+    font-size: 12rem;
+    letter-spacing: -.5rem;
+    line-height: 1.05em;
+    margin: 0 0 3rem 5rem;
+  }
+
+  &__card {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 9.5rem 10rem 12rem 12rem;
+    position: relative;
+    width: 70rem;
+
+    &:after {
+      background-color: #EF0006;
+      bottom: -10rem;
+      content: '';
+      height: 18rem;
+      left: -2rem;
+      position: absolute;
+      transform: rotate(-36.4deg);
+      transform-origin: left center;
+      width: 100rem;
+    }
+
+    &__container {
+      margin: auto;
+    }
+
+    &__title {
+      color: #100C0D;
+      font-size: 9.5rem;
+      font-weight: 700;
+      letter-spacing: -.3rem;
+      line-height: .85em;
+      margin-bottom: 5rem;
+      margin-top: 4rem;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+  }
+
+  &__grid {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    &__column {
+      box-sizing: border-box;
+      display: inline-block;
+      float: left;
+      padding: 0 1rem;
+      position: relative;
+      width: 33%;
+      z-index: 1;
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.3rem;
+      }
+    }
+  }
+}
