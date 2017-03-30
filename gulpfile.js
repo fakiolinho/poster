@@ -5,7 +5,10 @@ var moduleImporter = require('sass-module-importer');
 
 gulp.task('sass', function () {
     return gulp.src('./scss/**/*.scss')
-    .pipe(sass({ importer: moduleImporter() }).on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'expanded',
+      importer: moduleImporter()
+    }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9'],
       cascade: false
